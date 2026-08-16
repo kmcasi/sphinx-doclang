@@ -39,7 +39,7 @@ DocLang can be installed either from PyPI or directly from GitHub.
 
         .. code-block:: doscon
 
-            C:\> pip install https://github.com/kmcasi/sphinx-doclang/archive/main.zip
+            C:\> pip install https://github.com/kmcasi/sphinx-doclang/archive/master.zip
 
 ~~~~
 

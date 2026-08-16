@@ -185,6 +185,7 @@ html_theme = "furo"
 
 # A dictionary of options that influence the look and feel of the selected theme. These are theme-specific.
 html_theme_options = {
+    "announcement": "<em> The documentation website is still a <b>work in progress</b></em>",
     "footer_icons": [
         {
             "name": "GitHub",
