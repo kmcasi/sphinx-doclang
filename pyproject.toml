@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sphinx-doclang"
+version = "26.7.8.rev1"
+description = "Sphinx extension providing the custom DSL for generating structured documentation blocks."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { file = "LICENSE" }
+authors = [{ name = "ASI" }]
+keywords = [
+	"sphinx",
+	"extension",
+	"dsl",
+	"doclang",
+	"documentation",
+	"autodoc",
+	"command",
+]
+classifiers = [
+  "Framework :: Sphinx",
+  "Framework :: Sphinx :: Extension",
+  
+  "Intended Audience :: Developers",
+  
+  "License :: OSI Approved :: MIT License",
+
+  "Natural Language :: English",
+  
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  
+  "Topic :: Documentation",
+  "Topic :: Documentation :: Sphinx",
+  "Topic :: Software Development :: Documentation",
+]
+dependencies = [
+    "Sphinx>=9.1.0",
+]
+
+[project.urls]
+Source = "https://github.com/kmcasi/sphinx-doclang"
+Issues = "https://github.com/kmcasi/sphinx-doclang/issues"
+
+[tool.setuptools]
+# package-dir = {"" = "src"}
+# license-files = []
+include-package-data = true
+
+[tool.setuptools.packages.find]
+# where = ["src"]

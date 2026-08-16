@@ -1,0 +1,211 @@
+<document source="E:\Python\Kivy3D\docs\api\uix\manager\hover.rst" translation_progress="{'total': 0, 'translated': 0}">
+ <section ids="hovermanager" names="hovermanager">
+  <title>
+   HoverManager
+  </title>
+  <container classes="literal-block-wrapper" ids="id2" literal_block="True">
+   <caption>
+    Module path
+   </caption>
+   <literal_block force="False" highlight_args="{}" language="default" linenos="False" xml:space="preserve">
+    kivydk.uix.manager.hover
+   </literal_block>
+  </container>
+  <transition>
+  </transition>
+  <section ids="overview" names="overview">
+   <title>
+    Overview
+   </title>
+   <paragraph>
+    This manager coordinates hover detection by keeping a registry of widgets that support hover interactions
+and performing optimized checks to determine which one is currently under the cursor. This centralized approach
+eliminates redundant per‑widget computations and ensures that only the relevant widgets are evaluated until a hover
+target is identified.
+   </paragraph>
+  </section>
+  <transition>
+  </transition>
+  <section ids="module-kivydk.uix.manager.hover api-reference" names="api\ reference">
+   <title>
+    API Reference
+   </title>
+   <index entries="[('pair', 'module; kivydk.uix.manager.hover', 'module-kivydk.uix.manager.hover', '', None)]">
+   </index>
+   <index entries="[('single', 'HoverManagerBase (class in kivydk.uix.manager.hover)', 'kivydk.uix.manager.hover.HoverManagerBase', '', None)]">
+   </index>
+   <desc classes="py class" desctype="class" domain="py" no-contents-entry="False" no-index="False" no-index-entry="False" no-typesetting="False" nocontentsentry="False" noindex="False" noindexentry="False" objtype="class">
+    <desc_signature _toc_name="HoverManagerBase" _toc_parts="('kivydk.uix.manager.hover', 'HoverManagerBase')" class="" classes="sig sig-object py" fullname="HoverManagerBase" ids="kivydk.uix.manager.hover.HoverManagerBase" module="kivydk.uix.manager.hover">
+     <desc_annotation xml:space="preserve">
+      <desc_sig_keyword classes="k">
+       class
+      </desc_sig_keyword>
+      <desc_sig_space classes="w">
+      </desc_sig_space>
+     </desc_annotation>
+     <desc_name classes="sig-name descname" xml:space="preserve">
+      HoverManagerBase
+     </desc_name>
+     <desc_parameterlist multi_line_parameter_list="False" multi_line_trailing_comma="True" xml:space="preserve">
+      <desc_parameter xml:space="preserve">
+       <desc_sig_operator classes="o">
+        **
+       </desc_sig_operator>
+       <desc_sig_name classes="n">
+        kwargs
+       </desc_sig_name>
+      </desc_parameter>
+     </desc_parameterlist>
+    </desc_signature>
+    <desc_content>
+     <paragraph>
+      Bases:
+      <literal classes="xref py py-class">
+       EventDispatcher
+      </literal>
+     </paragraph>
+     <paragraph>
+      Centralized manager responsible for efficient hover detection across all widgets that inherit from
+      <literal classes="xref py py-class">
+       HoverBehavior
+      </literal>
+      .
+     </paragraph>
+     <todo_node classes="admonition-todo" docname="api/uix/manager/hover" ids="id1">
+      <title>
+       Todo
+      </title>
+      <bullet_list bullet="-">
+       <list_item>
+        <paragraph>
+         Sort system need to be implemented. Usually the last registered widgets have high chance to be hovered ones.
+        </paragraph>
+       </list_item>
+       <list_item>
+        <definition_list>
+         <definition_list_item>
+          <term>
+           Some system to group widgets in chunks and to check them first.
+          </term>
+          <definition>
+           <bullet_list bullet="-">
+            <list_item>
+             <paragraph>
+              Tree system will be faster if the UIX become more complex.
+             </paragraph>
+            </list_item>
+           </bullet_list>
+          </definition>
+         </definition_list_item>
+        </definition_list>
+       </list_item>
+      </bullet_list>
+     </todo_node>
+     <index entries="[('single', 'register() (HoverManagerBase method)', 'kivydk.uix.manager.hover.HoverManagerBase.register', '', None)]">
+     </index>
+     <desc classes="py method" desctype="method" domain="py" no-contents-entry="False" no-index="False" no-index-entry="False" no-typesetting="False" nocontentsentry="False" noindex="False" noindexentry="False" objtype="method">
+      <desc_signature _toc_name="register" _toc_parts="('kivydk.uix.manager.hover', 'HoverManagerBase', 'register')" class="HoverManagerBase" classes="sig sig-object py" fullname="HoverManagerBase.register" ids="kivydk.uix.manager.hover.HoverManagerBase.register" module="kivydk.uix.manager.hover">
+       <desc_name classes="sig-name descname" xml:space="preserve">
+        register
+       </desc_name>
+       <desc_parameterlist multi_line_parameter_list="False" multi_line_trailing_comma="True" xml:space="preserve">
+        <desc_parameter xml:space="preserve">
+         <desc_sig_name classes="n">
+          widget
+         </desc_sig_name>
+         <desc_sig_punctuation classes="p">
+          :
+         </desc_sig_punctuation>
+         <desc_sig_space classes="w">
+         </desc_sig_space>
+         <desc_sig_name classes="n">
+          HoverBehavior
+         </desc_sig_name>
+        </desc_parameter>
+       </desc_parameterlist>
+       <desc_returns xml:space="preserve">
+        <reference internal="False" reftitle="(in Python v3.14)" refuri="https://docs.python.org/3/library/constants.html#None">
+         None
+        </reference>
+       </desc_returns>
+      </desc_signature>
+      <desc_content>
+       <paragraph>
+        Register a specific widget for hovering detection system.
+       </paragraph>
+      </desc_content>
+     </desc>
+     <index entries="[('single', 'unregister() (HoverManagerBase method)', 'kivydk.uix.manager.hover.HoverManagerBase.unregister', '', None)]">
+     </index>
+     <desc classes="py method" desctype="method" domain="py" no-contents-entry="False" no-index="False" no-index-entry="False" no-typesetting="False" nocontentsentry="False" noindex="False" noindexentry="False" objtype="method">
+      <desc_signature _toc_name="unregister" _toc_parts="('kivydk.uix.manager.hover', 'HoverManagerBase', 'unregister')" class="HoverManagerBase" classes="sig sig-object py" fullname="HoverManagerBase.unregister" ids="kivydk.uix.manager.hover.HoverManagerBase.unregister" module="kivydk.uix.manager.hover">
+       <desc_name classes="sig-name descname" xml:space="preserve">
+        unregister
+       </desc_name>
+       <desc_parameterlist multi_line_parameter_list="False" multi_line_trailing_comma="True" xml:space="preserve">
+        <desc_parameter xml:space="preserve">
+         <desc_sig_name classes="n">
+          widget
+         </desc_sig_name>
+         <desc_sig_punctuation classes="p">
+          :
+         </desc_sig_punctuation>
+         <desc_sig_space classes="w">
+         </desc_sig_space>
+         <desc_sig_name classes="n">
+          HoverBehavior
+         </desc_sig_name>
+        </desc_parameter>
+       </desc_parameterlist>
+       <desc_returns xml:space="preserve">
+        <reference internal="False" reftitle="(in Python v3.14)" refuri="https://docs.python.org/3/library/constants.html#None">
+         None
+        </reference>
+       </desc_returns>
+      </desc_signature>
+      <desc_content>
+       <paragraph>
+        Unregister a specific widget from hovering detection system.
+       </paragraph>
+      </desc_content>
+     </desc>
+    </desc_content>
+   </desc>
+   <index entries="[('single', 'HoverManager (in module kivydk.uix.manager.hover)', 'kivydk.uix.manager.hover.HoverManager', '', None)]">
+   </index>
+   <desc classes="py data" desctype="data" domain="py" no-contents-entry="False" no-index="False" no-index-entry="False" no-typesetting="False" nocontentsentry="False" noindex="False" noindexentry="False" objtype="data">
+    <desc_signature _toc_name="HoverManager" _toc_parts="('kivydk.uix.manager.hover', 'HoverManager')" class="" classes="sig sig-object py" fullname="HoverManager" ids="kivydk.uix.manager.hover.HoverManager" module="kivydk.uix.manager.hover">
+     <desc_name classes="sig-name descname" xml:space="preserve">
+      HoverManager
+     </desc_name>
+     <desc_annotation xml:space="preserve">
+      <desc_sig_punctuation classes="p">
+       :
+      </desc_sig_punctuation>
+      <desc_sig_space classes="w">
+      </desc_sig_space>
+      <reference internal="True" refid="kivydk.uix.manager.hover.HoverManagerBase" reftitle="kivydk.uix.manager.hover.HoverManagerBase">
+       HoverManagerBase
+      </reference>
+     </desc_annotation>
+     <desc_annotation xml:space="preserve">
+      <desc_sig_space classes="w">
+      </desc_sig_space>
+      <desc_sig_punctuation classes="p">
+       =
+      </desc_sig_punctuation>
+      <desc_sig_space classes="w">
+      </desc_sig_space>
+      <kivydk.uix.manager.hover.hovermanagerbase object="">
+      </kivydk.uix.manager.hover.hovermanagerbase>
+     </desc_annotation>
+    </desc_signature>
+    <desc_content>
+     <paragraph>
+      Global manager responsible for efficient hover detection.
+     </paragraph>
+    </desc_content>
+   </desc>
+  </section>
+ </section>
+</document>

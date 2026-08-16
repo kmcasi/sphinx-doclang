@@ -1,0 +1,45 @@
+#//|>-----------------------------------------------------------------------------------------------------------------<|
+#//| Debug report for Sphinx extension
+#//| Local ToC: 26.2.9.2
+#//| Project: KivyDK 0.1.0
+#//|>-----------------------------------------------------------------------------------------------------------------<|
+
+#//|>--------------------------------------------------------<|
+#//| Used default CSS classes: 6 from 6
+#//|>--------------------------------------------------------<|
+	• slt-dropdown        | <input> items used as checkbox for dropdown system
+	• slt-dropdown-branch | Starting depth branch for <ul> items
+	• slt-dropdown-depth  | Nested depth branch for <ul> items
+	• slt-dropdown-icon   | <label> items used for the arrows of dropdown system
+	• slt-dropdown-leaf   | Last <li> items in the depth branch
+	• slt-type            | Common class for all object type items
+
+
+#//|>--------------------------------------------------------<|
+#//| Used object type CSS classes: 7 from 37
+#//|>--------------------------------------------------------<|
+	• slt-obj-attribute
+	• slt-obj-class
+	• slt-obj-data
+	• slt-obj-exception
+	• slt-obj-function
+	• slt-obj-method
+	• slt-obj-property
+
+
+#//|>--------------------------------------------------------<|
+#//| One domain used from 7
+#//|>--------------------------------------------------------<|
+	• py   | Python script
+
+
+#//|>--------------------------------------------------------<|
+#//| Used object types: 7 from 51
+#//|>--------------------------------------------------------<|
+	• py   | attribute
+	• py   | class
+	• py   | data
+	• py   | exception
+	• py   | function
+	• py   | method
+	• py   | property
