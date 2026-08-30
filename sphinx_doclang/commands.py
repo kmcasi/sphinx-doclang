@@ -45,7 +45,6 @@ def cmd_title(name: str, *args, style: str = "Az", decorator: str = "=", **kwarg
         - ``§ title : my title, style = upper, decorator = - ¶``
     """
     style_name: str = style.lower()
-    print(f"[ TITLE ][ {name} ]", args, style)
 
     if style == "AZ" or style_name == "upper":
         name = name.upper()
