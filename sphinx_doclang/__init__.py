@@ -7,15 +7,15 @@ from sphinx.application import Sphinx
 from sphinx.util.typing import ExtensionMetadata
 
 from ._version import VERSION_STRING
+from .commands import _Template
 from .processor import setup_processor, validate_command_configuration_values
-from .manager import TemplateManager
 
 
 #// RUN
 def setup(app: Sphinx) -> ExtensionMetadata:
     setup_processor(app)
     validate_command_configuration_values(app)
-    TemplateManager._init_app(app)
+    _Template._init_app(app)
 
     return {
         "version": VERSION_STRING,

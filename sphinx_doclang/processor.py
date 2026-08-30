@@ -171,19 +171,49 @@ def _split_command(app: Sphinx, string: str) -> tuple[str, str, str]:
     # Configuration values
     tag_start: str = app.config["doclang_command_start"]
     tag_end: str = app.config["doclang_command_end"]
+    tag_escape: str = app.config["doclang_escape_marker"]
+    sample: str = string
 
-    # Find the next logical command
-    index_end: int = string.find(tag_end)
-    index_start: int = string.rfind(tag_start, 0, index_end)
+    # Find the valid ending command tag
+    index_end: int = sample.find(tag_end)
+    while (index_end - 1) > 0 and (sample[index_end - 1] in tag_escape):
+        offset: int = index_end + len(tag_end)
+        sample = sample[:index_end - 1] + tag_end + sample[offset:]
+        offset -= 1
 
-    # If either tag is missing, no valid command exists
-    if index_end == -1 or index_start == -1:
+        if offset < len(sample):
+            index_end = sample.find(tag_end, offset)
+
+        else:
+            index_end = -1
+            break
+
+    # If not a valid ending command tag is available
+    if index_end == -1:
+        return "", "", ""
+
+    # Find the valid starting command tag
+    index_start: int = sample.rfind(tag_start, 0, index_end)
+    while index_start > 0 and (sample[index_start - 1] in tag_escape):
+        offset: int = index_start - 2
+        sample = sample[:index_start - 1] + tag_start + sample[index_start + len(tag_start):]
+        index_end -= 1
+
+        if offset < 0:
+            index_start = -1
+            break
+
+        else:
+            index_start = sample.rfind(tag_start, 0, offset)
+
+    # If not a valid starting command tag is available
+    if index_start == -1:
         return "", "", ""
 
     return (
-        string[:index_start],                               # text before the command
-        string[index_start + len(tag_start):index_end],     # command content (no tags)
-        string[index_end + len(tag_end):]                   # text after the command
+        sample[:index_start],                               # text before the command
+        sample[index_start + len(tag_start):index_end],     # command content (no tags)
+        sample[index_end + len(tag_end):]                   # text after the command
     )
 
 
@@ -226,8 +256,8 @@ def _compute_command(app: Sphinx, string: str) -> str | list[str] | None:
                     token_sections: list[str] = token.split(cmd_kwargs_separator, 1)
                     token_kw: str = token_sections[0].strip()
 
-                    # If no value is provided for the keyword
-                    if len(token_sections) == 1:
+                    # If no value is provided for the keyword or the separator was escaped
+                    if len(token_sections) == 1 or token_kw[len(token_kw) - 1] in lexer.escape:
                         # Treat the keyword as a normal positional argument
                         cmd_args.append(token_kw)
 
@@ -404,10 +434,11 @@ def validate_command_configuration_values(app: Sphinx) -> None:
 
 
 #// LOGIC
-def _process_docstring(app: Sphinx,
-                       obj_type: str, obj_name: str, obj: object,
+def _process_docstring(app: Sphinx, obj_type: str, obj_name: str, obj: object,
                        _options: AutoDocOptions, lines: list[str]
                        ) -> None:
+
+    CommandManager.validate_command = app.config["doclang_validate_command"]
 
     TemplateManager.set_multiple_items(
         name = obj_name,
@@ -417,15 +448,6 @@ def _process_docstring(app: Sphinx,
     )
 
     _compute_lines(app, lines)
-
-    if obj_name == "sphinx_doclang.debug.Debug":
-        print("[_options]\n", _options, end="\n\n")
-        print("[DEBUG lines]")
-        line_number: int = 0
-        line_number_template: str = "%{0}.{0}s |".format(len(str(len(lines))))
-        for line in lines:
-            line_number += 1
-            print(line_number_template % line_number, line)
 
 
 def setup_processor(app: Sphinx) -> None:
@@ -474,6 +496,12 @@ def setup_processor(app: Sphinx) -> None:
     app.add_config_value(
         name="doclang_keep_unknown",
         default=False,
+        rebuild="env",
+        types=bool
+    )
+    app.add_config_value(
+        name="doclang_validate_command",
+        default=True,
         rebuild="env",
         types=bool
     )

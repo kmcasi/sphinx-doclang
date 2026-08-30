@@ -22,6 +22,9 @@ class BaseCommandManager:
         # Private variables
         self.__registry: dict[str, Callable] = {}
 
+        # Variables
+        self.validate_command: bool = True
+
     def new(self, name: str) -> Callable:
         """
         Decorator used to register a new DSL command.
@@ -117,7 +120,8 @@ class BaseCommandManager:
                 raise error
 
             # Validate the command before registration
-            self._validate_command(key, func)
+            if self.validate_command:
+                self._validate_command(key, func)
 
             # Register the command
             self.__registry[key] = func

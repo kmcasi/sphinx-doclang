@@ -8,9 +8,6 @@ from sphinx.application import Sphinx
 
 
 sys.path.insert(0, os.path.abspath(".."))
-# sys.path.insert(0, os.path.abspath("_extensions"))
-
-# import documentation.doclang_cmd
 
 
 #//|>-----------------------------------------------------------------------------------------------------------------<|
@@ -35,7 +32,7 @@ project_copyright = f"%Y. All rights are reserved by {author}."
 
 # The major project version.
 # If project does not draw a meaningful distinction between a ‘full’ and ‘major’ version, set both to the same value.
-version = "26.7.12"
+version = "26.8.30"
 
 # The full project version, used also in the HTML templates.
 # If project does not draw a meaningful distinction between a ‘full’ and ‘major’ version, set both to the same value.
@@ -52,17 +49,8 @@ needs_sphinx = "9.1.0"
 # These values determine how to format the current date.
 today = "%d %b %Y"
 
-# The default language to highlight source code in. The value should be a valid Pygments lexer name.
-# highlight_language = "default"
-
 # Dictionary that maps Pygments lexer names to their options.
 highlight_options = {"default": {"linenos": True}}
-
-# The style name to use for Pygments highlighting of source code.
-# pygments_style = "sphinx"
-
-# The style name to use for Pygments highlighting of source code. (Furo-specific at this time)
-# pygments_dark_style = "monokai"
 
 # A list of glob-style patterns that should be excluded when looking for source files.
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "**/.git"]
@@ -84,7 +72,7 @@ toc_object_entries_show_parents = "hide"
 
 # A list of strings that are module names of Sphinx extensions.
 extensions = [
-    # "sphinx.ext.autodoc",           # pull in docstrings from code
+    "sphinx.ext.autodoc",           # pull in docstrings from code
     "sphinx.ext.napoleon",          # support Google/NumPy-style docstrings
     "sphinx.ext.intersphinx",       # link to external docs (Python, etc.)
 
@@ -93,7 +81,6 @@ extensions = [
 
     # Custom extensions
     "sphinx_localtoc",              # [pip sphinx_localtoc] stylizing the local ToC
-    # "sphinx_doclang"                # DSL for documentation language (this project)
 ]
 
 
@@ -185,7 +172,6 @@ html_theme = "furo"
 
 # A dictionary of options that influence the look and feel of the selected theme. These are theme-specific.
 html_theme_options = {
-    "announcement": "<em> The documentation website is still a <b>work in progress</b></em>",
     "footer_icons": [
         {
             "name": "GitHub",
@@ -197,10 +183,10 @@ html_theme_options = {
 }
 
 # Title for the navigation bar. If None, it defaults to "<project> <release> documentation".
-html_title = f"{project} {release} doc"
+html_title = f"{project} {release}"
 
 # A shorter title for the navigation bar. Default is the same as html_title.
-html_short_title = f"{project} doc"
+html_short_title = f"{project}"
 
 # A list of paths that contain custom static files (such as style sheets or script files).
 html_static_path = ["_static"]
@@ -214,7 +200,7 @@ html_favicon = f"{html_static_path[0]}/icon_doclang.png"
 # A list of CSS files. The entry must be a filename or a tuple containing the filename and the attribute's dictionary.
 html_css_files = [
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css",
-    # "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css",
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css",
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css",
 
     "styles/custom_furo.css",

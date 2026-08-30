@@ -51,9 +51,8 @@ Enable DocLang by adding it to the ``extensions`` list in your ``conf.py``:
 .. code-block:: python
 
     extensions = [
-        ...,
-
         "sphinx.ext.autodoc",           # required: pull in docstrings from code
+        ...,
         "sphinx_doclang"                # DSL for documentation language
     ]
 

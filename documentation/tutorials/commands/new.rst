@@ -34,17 +34,6 @@ For example, a simple command that prints a greeting:
 Notes
 -----
 
-Before a command is registered, DocLang performs a validation step to ensure
-that the command can safely accept any number of arguments. If the command
-defines a return type hint and supports multiple arguments, it is considered
-valid immediately. Otherwise, DocLang simulates the command call with a large
-number of arguments (up to 100) to verify that the implementation does not
-break when users provide more arguments than expected.
-
-This check ensures that all commands behave consistently inside the DSL, where
-arguments are always passed as plain strings and the number of arguments cannot
-be restricted.
-
 - Command names must be unique.
 - Command names are not case sensitive.
 - Commands may accept arguments, but they are always passed as plain strings.

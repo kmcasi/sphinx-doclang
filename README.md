@@ -72,10 +72,8 @@ Below is some preview for what you need for this Sphinx configuration:
 
 ```python
 extensions = [
+    "sphinx.ext.autodoc",           # required: pull in docstrings from code
     ...,
-    
-    "sphinx.ext.autodoc",           # pull in docstrings from code
-    
     "sphinx_doclang"                # DSL for documentation language
 ]
 ```
@@ -88,10 +86,6 @@ DocLang commands can be used directly inside docstrings:
 class Example:
     """
     A simple example class.
-	
-    § list : First item, Second item, Third item ¶
-
-    § section : debug purpose only, style = camel ¶
 
     § debug object ¶
     """
@@ -133,4 +127,7 @@ doclang_escape_marker = "/|"
 
 # Whether unknown/unregistered commands should be preserved instead of removed.
 doclang_keep_unknown = False
+
+# Whether commands validation should be performed.
+doclang_validate_command = True
 ```

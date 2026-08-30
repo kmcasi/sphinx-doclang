@@ -4,8 +4,6 @@
 __all__ = ("Command",)
 
 #// IMPORT
-import inspect
-
 from .manager import CommandManager as Command
 from .manager import TemplateManager as _Template
 
@@ -38,7 +36,7 @@ def cmd_title(name: str, *args, style: str = "Az", decorator: str = "=", **kwarg
         - ``AZ`` or ``upper``       ➜ UPPERCASE
         - ``az`` or ``lower``       ➜ lowercase
         - ``Az`` or ``capitalize``  ➜ Capitalized
-        - ``Az Az`` or ``camel``    ➜ Camel case (capitalize each word)
+        - ``Az Az`` or ``camel``    ➜ Camel Case (capitalize each word)
 
     The underline is created by repeating the ``decorator`` character to match the length of the final title.
 
@@ -46,13 +44,16 @@ def cmd_title(name: str, *args, style: str = "Az", decorator: str = "=", **kwarg
         - ``§ title : My Title ¶``
         - ``§ title : my title, style = upper, decorator = - ¶``
     """
-    if style == "AZ" or style.lower() == "upper":
+    style_name: str = style.lower()
+    print(f"[ TITLE ][ {name} ]", args, style)
+
+    if style == "AZ" or style_name == "upper":
         name = name.upper()
-    elif style == "az" or style.lower() == "lower":
+    elif style == "az" or style_name == "lower":
         name = name.lower()
-    elif style == "Az" or style.lower() == "capitalize":
+    elif style == "Az" or style_name == "capitalize":
         name = name.capitalize()
-    elif style == "Az Az" or style.lower() == "camel":
+    elif style == "Az Az" or style_name == "camel":
         name = " ".join([word.capitalize() for word in name.split(" ")])
 
     return f"{name}\n{decorator * len(name)}"

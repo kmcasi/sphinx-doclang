@@ -9,8 +9,8 @@ __all__ = (
 #//| Version variables
 #//|>--------------------------------------------------------<|
 MAJOR: int = 26
-MINOR: int = 7
-MICRO: int = 12
+MINOR: int = 8
+MICRO: int = 30
 VERSION_STRING: str = f"{MAJOR}.{MINOR}.{MICRO}"
 
 

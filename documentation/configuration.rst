@@ -45,6 +45,9 @@ The following variables can be added to your ``conf.py`` file:
     # Whether unknown/unregistered commands should be preserved instead of removed.
     doclang_keep_unknown = False
 
+    # Whether commands validation should be performed.
+    doclang_validate_command = True
+
 ~~~~
 
 Syntax Rules
@@ -138,9 +141,9 @@ A command is always wrapped between the start and end markers:
         ----------------------
 
         - DOC ➜ (the object documentation)
-        - NAME ➜ sphinx_doclang.debug.Debug
+        - NAME ➜ sphinx_doclang.debug.MyClass
         - TYPE ➜ class
-        - OBJ ➜ <class 'sphinx_doclang.debug.Debug'>
+        - OBJ ➜ <class 'sphinx_doclang.debug.MyClass'>
 
         ~~~~
 
@@ -452,3 +455,26 @@ unsupported syntax do not appear in the generated documentation.
         :caption: Output
 
         Other § unknown command ¶ is here
+
+~~~~
+
+Validate Commands
++++++++++++++++++
+
+.. code-block:: python
+    :caption: Configuration variable
+
+    # Whether commands validation should be performed.
+    doclang_validate_command = True
+
+When this option is enabled, DocLang validates every command before it is
+registered or overwritten. The validation step ensures that the command can
+safely accept any number of arguments. If the command defines a return type
+hint and supports multiple arguments, it is considered valid immediately.
+Otherwise, DocLang simulates a call with a large number of arguments (up to
+100) to verify that the implementation does not break when users provide more
+arguments than expected.
+
+This mechanism ensures that all commands behave consistently inside the DSL,
+where arguments are always passed as plain strings and the number of arguments
+cannot be restricted.
