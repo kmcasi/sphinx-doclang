@@ -1,0 +1,10 @@
+# Exclude documentation folder
+exclude documentation/*
+prune documentation
+
+# Exclude egg-info folder
+# exclude sphinx_doclang.egg-info/*
+# prune sphinx_doclang.egg-info
+
+# Include only actual package
+recursive-include sphinx_doclang *

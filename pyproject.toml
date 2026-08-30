@@ -41,13 +41,15 @@ dependencies = [
 ]
 
 [project.urls]
+Documentation = "https://kmcasi.github.io/sphinx-doclang/"
 Source = "https://github.com/kmcasi/sphinx-doclang"
 Issues = "https://github.com/kmcasi/sphinx-doclang/issues"
 
 [tool.setuptools]
-# package-dir = {"" = "src"}
-# license-files = []
+#package-dir = {"" = "sphinx_doclang"}
+license-files = []
 include-package-data = true
 
 [tool.setuptools.packages.find]
-# where = ["src"]
+where = ["."]
+include = ["sphinx_doclang"]
