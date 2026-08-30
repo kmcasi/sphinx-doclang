@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "sphinx-doclang"
-version = "26.7.8.rev1"
+version = "26.8.30"
 description = "Sphinx extension providing the custom DSL for generating structured documentation blocks."
 readme = "README.md"
 requires-python = ">=3.12"
