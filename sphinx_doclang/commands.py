@@ -171,4 +171,4 @@ def cmd_self_obj(*args, **kwargs) -> str:
     Usage:
         - ``§ self obj ¶``
     """
-    return _Template["obj"][1:-1]
+    return str(_Template.OBJ)[1:-1]

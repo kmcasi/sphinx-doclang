@@ -7,7 +7,7 @@
         <link rel="prefetch" href="../_static/logo_doclang.png" as="image">
 
     <link rel="shortcut icon" href="../_static/icon_doclang.png"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>Templates - DocLang 26.8.30</title>
+        <title>Templates - DocLang 26.9.16</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/custom_furo.css?v=c9aa5422" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/custom_sphinx-design.css?v=415b7592" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/doclang.css?v=97c50c82" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/doclang.css?v=5d78043f" />
     
     
 
@@ -171,7 +171,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../index.html"><div class="brand">DocLang 26.8.30</div></a>
+      <a href="../index.html"><div class="brand">DocLang 26.9.16</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -195,7 +195,7 @@
     <img class="sidebar-logo" src="../_static/logo_doclang.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">DocLang 26.8.30</span>
+  <span class="sidebar-brand-text">DocLang 26.9.16</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search" autocomplete="off">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search"
@@ -283,22 +283,46 @@ inside a <code class="docutils literal notranslate"><span class="pre">doclang</s
 <code class="docutils literal notranslate"><span class="pre">templates_path</span></code> in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
 <p>For example, if <code class="docutils literal notranslate"><span class="pre">templates_path</span></code> contains <code class="docutils literal notranslate"><span class="pre">[&quot;_templates&quot;]</span></code>, DocLang will look
 for templates inside:</p>
-<blockquote>
-<div><p>_templates/doclang/</p>
-</div></blockquote>
-<p>Only directories that contain a <code class="docutils literal notranslate"><span class="pre">doclang</span></code> folder are considered valid template
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 dl-directory-preview">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">_templates/doclang/</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<dl class="simple">
+<dt><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file-directory" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 2.75C0 1.784.784 1 1.75 1H5c.55 0 1.07.26 1.4.7l.9 1.2a.25.25 0 0 0 .2.1h6.75c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25H7.5c-.55 0-1.07-.26-1.4-.7l-.9-1.2a.25.25 0 0 0-.2-.1Z"></path></svg> _templates</dt><dd><p class="sd-card-text">└── <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file-directory" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 2.75C0 1.784.784 1 1.75 1H5c.55 0 1.07.26 1.4.7l.9 1.2a.25.25 0 0 0 .2.1h6.75c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25H7.5c-.55 0-1.07-.26-1.4-.7l-.9-1.2a.25.25 0 0 0-.2-.1Z"></path></svg> doclang</p>
+</dd>
+</dl>
+</div>
+</details><p>Only directories that contain a <code class="docutils literal notranslate"><span class="pre">doclang</span></code> folder are considered valid template
 roots.</p>
 <p>Template files use the <code class="docutils literal notranslate"><span class="pre">.dlt</span></code> extension. The file name and directory structure
 are determined by the template type and name. A template referenced as
 <code class="docutils literal notranslate"><span class="pre">type/name</span></code> is loaded from:</p>
-<blockquote>
-<div><p>doclang/&lt;type&gt;/&lt;name&gt;.dlt</p>
-</div></blockquote>
-<p>If the file does not exist, DocLang falls back to:</p>
-<blockquote>
-<div><p>doclang/&lt;type&gt;.dlt</p>
-</div></blockquote>
-<p>This allows both nested and flat template layouts.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 dl-directory-preview">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">_templates/doclang/&lt;type&gt;/&lt;name&gt;.dlt</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<dl class="simple">
+<dt><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file-directory" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 2.75C0 1.784.784 1 1.75 1H5c.55 0 1.07.26 1.4.7l.9 1.2a.25.25 0 0 0 .2.1h6.75c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25H7.5c-.55 0-1.07-.26-1.4-.7l-.9-1.2a.25.25 0 0 0-.2-.1Z"></path></svg> _templates</dt><dd><dl class="simple">
+<dt>└─ <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file-directory" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 2.75C0 1.784.784 1 1.75 1H5c.55 0 1.07.26 1.4.7l.9 1.2a.25.25 0 0 0 .2.1h6.75c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25H7.5c-.55 0-1.07-.26-1.4-.7l-.9-1.2a.25.25 0 0 0-.2-.1Z"></path></svg> doclang</dt><dd><dl class="simple">
+<dt>└─ <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file-directory" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 2.75C0 1.784.784 1 1.75 1H5c.55 0 1.07.26 1.4.7l.9 1.2a.25.25 0 0 0 .2.1h6.75c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25H7.5c-.55 0-1.07-.26-1.4-.7l-.9-1.2a.25.25 0 0 0-.2-.1Z"></path></svg> &lt;type&gt;</dt><dd><p class="sd-card-text">└─ <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z"></path></svg> &lt;name&gt;.dlt</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</details><p>If the file does not exist, DocLang falls back to:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 dl-directory-preview">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">_templates/doclang/&lt;type&gt;.dlt</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<dl class="simple">
+<dt><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file-directory" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 2.75C0 1.784.784 1 1.75 1H5c.55 0 1.07.26 1.4.7l.9 1.2a.25.25 0 0 0 .2.1h6.75c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25H7.5c-.55 0-1.07-.26-1.4-.7l-.9-1.2a.25.25 0 0 0-.2-.1Z"></path></svg> _templates</dt><dd><dl class="simple">
+<dt>└─ <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file-directory" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 2.75C0 1.784.784 1 1.75 1H5c.55 0 1.07.26 1.4.7l.9 1.2a.25.25 0 0 0 .2.1h6.75c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25H7.5c-.55 0-1.07-.26-1.4-.7l-.9-1.2a.25.25 0 0 0-.2-.1Z"></path></svg> doclang</dt><dd><p class="sd-card-text">└─ <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z"></path></svg> &lt;type&gt;.dlt</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</details><p>This allows both nested and flat template layouts.</p>
 <p>DocLang discovers template directories during Sphinx initialization by scanning
 all paths listed in <code class="docutils literal notranslate"><span class="pre">templates_path</span></code> and collecting those that contain a
 <code class="docutils literal notranslate"><span class="pre">doclang</span></code> subdirectory. All template lookups search these directories in the
@@ -339,9 +363,6 @@ prevent very large documentation blocks from cluttering the output.</p>
 </tr>
 <tr class="row-odd"><td><p class="sd-card-text">TYPE</p></td>
 <td><p class="sd-card-text">The type of the current object (for example: module, class, function).</p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text">OBJ</p></td>
-<td><p class="sd-card-text">The raw object reference used internally by DocLang.</p></td>
 </tr>
 </tbody>
 </table>
@@ -397,22 +418,60 @@ listed in <code class="docutils literal notranslate"><span class="pre">templates
 <p>The expected file locations are:</p>
 <blockquote>
 <div><p>For the class example above, DocLang will first try:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">_templates</span><span class="o">/</span><span class="n">doclang</span><span class="o">/</span><span class="n">class</span><span class="o">/</span><span class="n">MyClass</span><span class="o">.</span><span class="n">dlt</span>
-</pre></div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 dl-directory-preview">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">_templates/doclang/class/MyClass.dlt</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<dl class="simple">
+<dt><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file-directory" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 2.75C0 1.784.784 1 1.75 1H5c.55 0 1.07.26 1.4.7l.9 1.2a.25.25 0 0 0 .2.1h6.75c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25H7.5c-.55 0-1.07-.26-1.4-.7l-.9-1.2a.25.25 0 0 0-.2-.1Z"></path></svg> _templates</dt><dd><dl class="simple">
+<dt>└─ <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file-directory" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 2.75C0 1.784.784 1 1.75 1H5c.55 0 1.07.26 1.4.7l.9 1.2a.25.25 0 0 0 .2.1h6.75c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25H7.5c-.55 0-1.07-.26-1.4-.7l-.9-1.2a.25.25 0 0 0-.2-.1Z"></path></svg> doclang</dt><dd><dl class="simple">
+<dt>└─ <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file-directory" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 2.75C0 1.784.784 1 1.75 1H5c.55 0 1.07.26 1.4.7l.9 1.2a.25.25 0 0 0 .2.1h6.75c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25H7.5c-.55 0-1.07-.26-1.4-.7l-.9-1.2a.25.25 0 0 0-.2-.1Z"></path></svg> class</dt><dd><p class="sd-card-text">└─ <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z"></path></svg> MyClass.dlt</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
 </div>
-<p>If the file does not exist, it falls back to:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">_templates</span><span class="o">/</span><span class="n">doclang</span><span class="o">/</span><span class="n">class</span><span class="o">.</span><span class="n">dlt</span>
-</pre></div>
+</details><p>If the file does not exist, it falls back to:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 dl-directory-preview">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">_templates/doclang/class.dlt</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<dl class="simple">
+<dt><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file-directory" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 2.75C0 1.784.784 1 1.75 1H5c.55 0 1.07.26 1.4.7l.9 1.2a.25.25 0 0 0 .2.1h6.75c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25H7.5c-.55 0-1.07-.26-1.4-.7l-.9-1.2a.25.25 0 0 0-.2-.1Z"></path></svg> _templates</dt><dd><dl class="simple">
+<dt>└─ <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file-directory" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 2.75C0 1.784.784 1 1.75 1H5c.55 0 1.07.26 1.4.7l.9 1.2a.25.25 0 0 0 .2.1h6.75c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25H7.5c-.55 0-1.07-.26-1.4-.7l-.9-1.2a.25.25 0 0 0-.2-.1Z"></path></svg> doclang</dt><dd><p class="sd-card-text">└─ <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z"></path></svg> class.dlt</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </div>
-<p>For the attribute example, DocLang will first try:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">_templates</span><span class="o">/</span><span class="n">doclang</span><span class="o">/</span><span class="n">attribute</span><span class="o">/</span><span class="n">my_attribute</span><span class="o">.</span><span class="n">dlt</span>
-</pre></div>
+</details><p>For the attribute example, DocLang will first try:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 dl-directory-preview">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">_templates/doclang/attribute/my_attribute.dlt</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<dl class="simple">
+<dt><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file-directory" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 2.75C0 1.784.784 1 1.75 1H5c.55 0 1.07.26 1.4.7l.9 1.2a.25.25 0 0 0 .2.1h6.75c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25H7.5c-.55 0-1.07-.26-1.4-.7l-.9-1.2a.25.25 0 0 0-.2-.1Z"></path></svg> _templates</dt><dd><dl class="simple">
+<dt>└─ <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file-directory" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 2.75C0 1.784.784 1 1.75 1H5c.55 0 1.07.26 1.4.7l.9 1.2a.25.25 0 0 0 .2.1h6.75c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25H7.5c-.55 0-1.07-.26-1.4-.7l-.9-1.2a.25.25 0 0 0-.2-.1Z"></path></svg> doclang</dt><dd><dl class="simple">
+<dt>└─ <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file-directory" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 2.75C0 1.784.784 1 1.75 1H5c.55 0 1.07.26 1.4.7l.9 1.2a.25.25 0 0 0 .2.1h6.75c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25H7.5c-.55 0-1.07-.26-1.4-.7l-.9-1.2a.25.25 0 0 0-.2-.1Z"></path></svg> attribute</dt><dd><p class="sd-card-text">└─ <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z"></path></svg> my_attribute.dlt</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
 </div>
-<p>And if missing, it falls back to:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">_templates</span><span class="o">/</span><span class="n">doclang</span><span class="o">/</span><span class="n">attribute</span><span class="o">.</span><span class="n">dlt</span>
-</pre></div>
+</details><p>And if missing, it falls back to:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 dl-directory-preview">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">_templates/doclang/attribute.dlt</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<dl class="simple">
+<dt><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file-directory" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 2.75C0 1.784.784 1 1.75 1H5c.55 0 1.07.26 1.4.7l.9 1.2a.25.25 0 0 0 .2.1h6.75c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25H7.5c-.55 0-1.07-.26-1.4-.7l-.9-1.2a.25.25 0 0 0-.2-.1Z"></path></svg> _templates</dt><dd><dl class="simple">
+<dt>└─ <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file-directory" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 2.75C0 1.784.784 1 1.75 1H5c.55 0 1.07.26 1.4.7l.9 1.2a.25.25 0 0 0 .2.1h6.75c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25H7.5c-.55 0-1.07-.26-1.4-.7l-.9-1.2a.25.25 0 0 0-.2-.1Z"></path></svg> doclang</dt><dd><p class="sd-card-text">└─ <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z"></path></svg> attribute.dlt</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </div>
-</div></blockquote>
+</details></div></blockquote>
 <p>This mechanism allows projects to define highly specific templates for
 individual objects, while also providing generic templates that apply to all
 objects of a given type. The <code class="docutils literal notranslate"><span class="pre">type</span></code> directory may contain any number of
@@ -421,33 +480,63 @@ specific templates, each named after the corresponding Python object.</p>
 <section id="step-2-create-a-template">
 <h3>[Step 2] Create a template<a class="headerlink" href="#step-2-create-a-template" title="Link to this heading">&#10070;</a></h3>
 <p>To define a template specifically for <code class="docutils literal notranslate"><span class="pre">MyClass</span></code>, create the file:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">_templates</span><span class="o">/</span><span class="n">doclang</span><span class="o">/</span><span class="n">class</span><span class="o">/</span><span class="n">MyClass</span><span class="o">.</span><span class="n">dlt</span>
-</pre></div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 dl-directory-preview">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">_templates/doclang/class/MyClass.dlt</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<dl class="simple">
+<dt><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file-directory" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 2.75C0 1.784.784 1 1.75 1H5c.55 0 1.07.26 1.4.7l.9 1.2a.25.25 0 0 0 .2.1h6.75c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25H7.5c-.55 0-1.07-.26-1.4-.7l-.9-1.2a.25.25 0 0 0-.2-.1Z"></path></svg> _templates</dt><dd><dl class="simple">
+<dt>└─ <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file-directory" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 2.75C0 1.784.784 1 1.75 1H5c.55 0 1.07.26 1.4.7l.9 1.2a.25.25 0 0 0 .2.1h6.75c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25H7.5c-.55 0-1.07-.26-1.4-.7l-.9-1.2a.25.25 0 0 0-.2-.1Z"></path></svg> doclang</dt><dd><dl class="simple">
+<dt>└─ <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file-directory" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 2.75C0 1.784.784 1 1.75 1H5c.55 0 1.07.26 1.4.7l.9 1.2a.25.25 0 0 0 .2.1h6.75c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25H7.5c-.55 0-1.07-.26-1.4-.7l-.9-1.2a.25.25 0 0 0-.2-.1Z"></path></svg> class</dt><dd><p class="sd-card-text">└─ <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z"></path></svg> MyClass.dlt</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
 </div>
-<p>Inside this file, you may use any text and any placeholders supported by
+</details><p>Inside this file, you may use any text and any placeholders supported by
 DocLang. For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{{ DOC }}
-
-Some repetitive information specifically for all classes named &quot;MyClass&quot;.
-
-§ debug object ¶
+<div class="highlight-Text notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>{{ DOC }}
+<span class="linenos">2</span>
+<span class="linenos">3</span>Some repetitive information specifically for all classes named &quot;MyClass&quot;.
+<span class="linenos">4</span>
+<span class="linenos">5</span>§ debug object ¶
 </pre></div>
 </div>
 <p>When DocLang processes <code class="docutils literal notranslate"><span class="pre">MyClass</span></code>, this file is loaded and all placeholders are
 substituted with the current values.</p>
 <p>If the file <code class="docutils literal notranslate"><span class="pre">doclang/class/MyClass.dlt</span></code> does not exist, DocLang falls back to:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">_templates</span><span class="o">/</span><span class="n">doclang</span><span class="o">/</span><span class="n">class</span><span class="o">.</span><span class="n">dlt</span>
-</pre></div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 dl-directory-preview">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">_templates/doclang/class.dlt</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<dl class="simple">
+<dt><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file-directory" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 2.75C0 1.784.784 1 1.75 1H5c.55 0 1.07.26 1.4.7l.9 1.2a.25.25 0 0 0 .2.1h6.75c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25H7.5c-.55 0-1.07-.26-1.4-.7l-.9-1.2a.25.25 0 0 0-.2-.1Z"></path></svg> _templates</dt><dd><dl class="simple">
+<dt>└─ <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file-directory" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 2.75C0 1.784.784 1 1.75 1H5c.55 0 1.07.26 1.4.7l.9 1.2a.25.25 0 0 0 .2.1h6.75c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25H7.5c-.55 0-1.07-.26-1.4-.7l-.9-1.2a.25.25 0 0 0-.2-.1Z"></path></svg> doclang</dt><dd><p class="sd-card-text">└─ <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z"></path></svg> class.dlt</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </div>
-<p>which applies to all classes.</p>
+</details><p>which applies to all classes.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Depending on the operating system, file names may not be case-sensitive.
 For example, on Windows the following file name is also accepted:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">_templates</span><span class="o">/</span><span class="n">doclang</span><span class="o">/</span><span class="n">class</span><span class="o">/</span><span class="n">myclass</span><span class="o">.</span><span class="n">dlt</span>
-</pre></div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 dl-directory-preview">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">_templates/doclang/class/myclass.dlt</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<dl class="simple">
+<dt><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file-directory" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 2.75C0 1.784.784 1 1.75 1H5c.55 0 1.07.26 1.4.7l.9 1.2a.25.25 0 0 0 .2.1h6.75c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25H7.5c-.55 0-1.07-.26-1.4-.7l-.9-1.2a.25.25 0 0 0-.2-.1Z"></path></svg> _templates</dt><dd><dl class="simple">
+<dt>└─ <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file-directory" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 2.75C0 1.784.784 1 1.75 1H5c.55 0 1.07.26 1.4.7l.9 1.2a.25.25 0 0 0 .2.1h6.75c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25H7.5c-.55 0-1.07-.26-1.4-.7l-.9-1.2a.25.25 0 0 0-.2-.1Z"></path></svg> doclang</dt><dd><dl class="simple">
+<dt>└─ <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file-directory" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 2.75C0 1.784.784 1 1.75 1H5c.55 0 1.07.26 1.4.7l.9 1.2a.25.25 0 0 0 .2.1h6.75c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25H7.5c-.55 0-1.07-.26-1.4-.7l-.9-1.2a.25.25 0 0 0-.2-.1Z"></path></svg> class</dt><dd><p class="sd-card-text">└─ <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z"></path></svg> myclass.dlt</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
 </div>
-<p>On case-sensitive file systems (such as most Linux distributions), the file
+</details><p>On case-sensitive file systems (such as most Linux distributions), the file
 name must match the exact class or attribute name, including uppercase and
 lowercase letters.</p>
 </div>
@@ -549,7 +638,7 @@ No additional commands or configuration are required.</p>
       
     </aside>
   </div>
-</div><script src="../_static/documentation_options.js?v=b58096d6"></script>
+</div><script src="../_static/documentation_options.js?v=2a8bdafb"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/scripts/furo.js?v=46bd48cc"></script>

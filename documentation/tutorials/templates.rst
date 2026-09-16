@@ -35,7 +35,11 @@ inside a ``doclang`` subdirectory located under any directory listed in
 For example, if ``templates_path`` contains ``["_templates"]``, DocLang will look
 for templates inside:
 
-    _templates/doclang/
+.. dropdown:: _templates/doclang/
+    :class-container: dl-directory-preview
+
+    :octicon:`file-directory` _templates
+      └── :octicon:`file-directory` doclang
 
 Only directories that contain a ``doclang`` folder are considered valid template
 roots.
@@ -44,11 +48,22 @@ Template files use the ``.dlt`` extension. The file name and directory structure
 are determined by the template type and name. A template referenced as
 ``type/name`` is loaded from:
 
-    doclang/<type>/<name>.dlt
+.. dropdown:: _templates/doclang/<type>/<name>.dlt
+    :class-container: dl-directory-preview
+
+    :octicon:`file-directory` _templates
+      └─ :octicon:`file-directory` doclang
+        └─ :octicon:`file-directory` <type>
+          └─ :octicon:`file` <name>.dlt
 
 If the file does not exist, DocLang falls back to:
 
-    doclang/<type>.dlt
+.. dropdown:: _templates/doclang/<type>.dlt
+    :class-container: dl-directory-preview
+
+    :octicon:`file-directory` _templates
+      └─ :octicon:`file-directory` doclang
+        └─ :octicon:`file` <type>.dlt
 
 This allows both nested and flat template layouts.
 
@@ -96,8 +111,6 @@ is left unchanged.
           - The name of the current object.
         * - TYPE
           - The type of the current object (for example: module, class, function).
-        * - OBJ
-          - The raw object reference used internally by DocLang.
 
 ~~~~
 
@@ -151,21 +164,43 @@ Assuming your ``conf.py`` contains:
 
 The expected file locations are:
 
-    For the class example above, DocLang will first try::
+    For the class example above, DocLang will first try:
 
-        _templates/doclang/class/MyClass.dlt
+    .. dropdown:: _templates/doclang/class/MyClass.dlt
+        :class-container: dl-directory-preview
 
-    If the file does not exist, it falls back to::
+        :octicon:`file-directory` _templates
+          └─ :octicon:`file-directory` doclang
+            └─ :octicon:`file-directory` class
+              └─ :octicon:`file` MyClass.dlt
 
-        _templates/doclang/class.dlt
+    If the file does not exist, it falls back to:
 
-    For the attribute example, DocLang will first try::
+    .. dropdown:: _templates/doclang/class.dlt
+        :class-container: dl-directory-preview
 
-        _templates/doclang/attribute/my_attribute.dlt
+        :octicon:`file-directory` _templates
+          └─ :octicon:`file-directory` doclang
+            └─ :octicon:`file` class.dlt
 
-    And if missing, it falls back to::
+    For the attribute example, DocLang will first try:
 
-        _templates/doclang/attribute.dlt
+    .. dropdown:: _templates/doclang/attribute/my_attribute.dlt
+        :class-container: dl-directory-preview
+
+        :octicon:`file-directory` _templates
+          └─ :octicon:`file-directory` doclang
+            └─ :octicon:`file-directory` attribute
+              └─ :octicon:`file` my_attribute.dlt
+
+    And if missing, it falls back to:
+
+    .. dropdown:: _templates/doclang/attribute.dlt
+        :class-container: dl-directory-preview
+
+        :octicon:`file-directory` _templates
+          └─ :octicon:`file-directory` doclang
+            └─ :octicon:`file` attribute.dlt
 
 This mechanism allows projects to define highly specific templates for
 individual objects, while also providing generic templates that apply to all
@@ -175,12 +210,21 @@ specific templates, each named after the corresponding Python object.
 [Step 2] Create a template
 ++++++++++++++++++++++++++
 
-To define a template specifically for ``MyClass``, create the file::
+To define a template specifically for ``MyClass``, create the file:
 
-    _templates/doclang/class/MyClass.dlt
+.. dropdown:: _templates/doclang/class/MyClass.dlt
+    :class-container: dl-directory-preview
+
+    :octicon:`file-directory` _templates
+      └─ :octicon:`file-directory` doclang
+        └─ :octicon:`file-directory` class
+          └─ :octicon:`file` MyClass.dlt
 
 Inside this file, you may use any text and any placeholders supported by
-DocLang. For example::
+DocLang. For example:
+
+.. code-block:: Text
+    :linenos:
 
     {{ DOC }}
 
@@ -191,18 +235,29 @@ DocLang. For example::
 When DocLang processes ``MyClass``, this file is loaded and all placeholders are
 substituted with the current values.
 
-If the file ``doclang/class/MyClass.dlt`` does not exist, DocLang falls back to::
+If the file ``doclang/class/MyClass.dlt`` does not exist, DocLang falls back to:
 
-    _templates/doclang/class.dlt
+.. dropdown:: _templates/doclang/class.dlt
+    :class-container: dl-directory-preview
+
+    :octicon:`file-directory` _templates
+      └─ :octicon:`file-directory` doclang
+        └─ :octicon:`file` class.dlt
 
 which applies to all classes.
 
 .. note::
 
     Depending on the operating system, file names may not be case-sensitive.
-    For example, on Windows the following file name is also accepted::
+    For example, on Windows the following file name is also accepted:
 
-        _templates/doclang/class/myclass.dlt
+    .. dropdown:: _templates/doclang/class/myclass.dlt
+        :class-container: dl-directory-preview
+
+        :octicon:`file-directory` _templates
+          └─ :octicon:`file-directory` doclang
+            └─ :octicon:`file-directory` class
+              └─ :octicon:`file` myclass.dlt
 
     On case-sensitive file systems (such as most Linux distributions), the file
     name must match the exact class or attribute name, including uppercase and

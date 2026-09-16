@@ -443,9 +443,10 @@ def _process_docstring(app: Sphinx, obj_type: str, obj_name: str, obj: object,
     TemplateManager.set_multiple_items(
         name = obj_name,
         type = obj_type,
-        obj = str(obj),
         doc = "\n".join(lines).strip()
     )
+
+    TemplateManager._TemplateManager__OBJ = obj
 
     _compute_lines(app, lines)
 

@@ -260,6 +260,7 @@ class BaseTemplateManager:
         # Private variables
         self.__template_paths: list[Path] = []
         self.__map: dict[str, str] = {}
+        self.__OBJ: object|None = None
 
     @property
     def names(self) -> list[str]:
@@ -275,6 +276,33 @@ class BaseTemplateManager:
     def items(self) -> list[tuple[str, str]]:
         """ A list-like tuple providing a view on the mapped names and values. """
         return [(name, value) for name, value in self.__map.items()]
+
+    @property
+    def OBJ(self) -> object|None:
+        """
+        The underlying Python object associated with the current documentation
+        target. This attribute is read‑only and is set internally by DocLang during
+        processing. It allows advanced features such as evaluated examples or
+        dynamic documentation that require direct access to the live object.
+
+        .. attention::
+           Accessing ``OBJ`` exposes the real Python object without any sandboxing.
+           Calling methods or modifying attributes can affect runtime state and may
+           produce unintended side effects. Use this feature with great care.
+           DocLang provides no safety guarantees, and misuse is entirely at your
+           own risk.
+
+        .. attention::
+           ``OBJ`` is a direct reference to the live Python object. DocLang does not
+           sandbox or isolate access in any way. Any interaction with this object may
+           mutate state, trigger side effects, or alter program behavior. This feature
+           is intended strictly for advanced documentation generation.
+
+           Use it only if you fully understand the risks!
+
+        Returns ``None`` when no object is available.
+        """
+        return self.__OBJ
 
     def set_multiple_items(self, **kwargs: str) -> None:
         """
