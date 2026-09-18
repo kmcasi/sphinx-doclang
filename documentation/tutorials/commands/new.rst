@@ -25,18 +25,19 @@ For example, a simple command that prints a greeting:
 
     from sphinx_doclang.commands import Command
 
-    @Command.new("hello")
+    @Command.new("hi")
     def hello_command(name, *args, **kwargs):
         return f"Hello {name}!"
 
-~~~~
+This command can be used in any documentation string:
 
-Notes
------
+.. code-block:: Python3
+    :linenos:
 
-- Command names must be unique.
-- Command names are not case sensitive.
-- Commands may accept arguments, but they are always passed as plain strings.
-- Commands run during documentation generation, so they should be fast and deterministic.
-- Commands must accept any number of positional and keyword arguments.
-- Commands must return either a single string or a list of strings.
+    class MyClass:
+        """
+        Some class documentation.
+
+        § hi : MyClass ¶
+        """
+

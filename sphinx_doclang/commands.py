@@ -28,7 +28,7 @@ def cmd_delimiter(*args, decorator: str = "~", **kwargs) -> str:
 
 # noinspection PyUnusedLocal
 @Command.new("title")
-def cmd_title(name: str, *args, style: str = "Az", decorator: str = "=", **kwargs) -> str:
+def cmd_title(name: str, *args, style: str = "Az", decorator: str = "=", **kwargs) -> list[str]:
     """
     Generates a formatted title with an underline.
 
@@ -55,7 +55,7 @@ def cmd_title(name: str, *args, style: str = "Az", decorator: str = "=", **kwarg
     elif style == "Az Az" or style_name == "camel":
         name = " ".join([word.capitalize() for word in name.split(" ")])
 
-    return f"{name}\n{decorator * len(name)}"
+    return [name, decorator * len(name)]
 
 
 # noinspection PyUnusedLocal
@@ -76,7 +76,7 @@ def cmd_section(title: str, *args, style: str = "Az", decorator: str = "-", **kw
     return [
         cmd_delimiter(),
         "",
-        cmd_title(title, style=style, decorator=decorator)
+        *cmd_title(title, style=style, decorator=decorator)
     ]
 
 
@@ -93,14 +93,10 @@ def cmd_debug_object(*args, **kwargs) -> list[str]:
         - ``§ debug object ¶``
     """
     return [
-        cmd_delimiter(),
-        "",
-        cmd_title("DocLang ➜ Debug Object", decorator="-"),
+        *cmd_title("[ DocLang ➜ Debug Object ]", decorator="-"),
         "",
         f"- DOC ➜ \"{_Template['DOC'][:21]}{'' if len(_Template['DOC']) < 22 else '...'}\"",
         *[f"- {' ➜ '.join(registry)}" for registry in _Template.items if registry[0] != "DOC"],
-        "",
-        cmd_delimiter()
     ]
 
 

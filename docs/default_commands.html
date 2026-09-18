@@ -3,11 +3,11 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="Tutorials" href="tutorials.html"><link rel="prev" title="Configuration" href="configuration.html">
+<link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="Tutorials" href="tutorials.html"><link rel="prev" title="Command Behavior" href="behavior.html">
         <link rel="prefetch" href="_static/logo_doclang.png" as="image">
 
     <link rel="shortcut icon" href="_static/icon_doclang.png"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>Default Commands - DocLang 26.9.16</title>
+        <title>Default Commands - DocLang 26.9.18</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/custom_furo.css?v=c9aa5422" />
     <link rel="stylesheet" type="text/css" href="_static/styles/custom_sphinx-design.css?v=415b7592" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/doclang.css?v=97c50c82" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/doclang.css?v=63d6d329" />
     
     
 
@@ -171,7 +171,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">DocLang 26.9.16</div></a>
+      <a href="index.html"><div class="brand">DocLang 26.9.18</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -195,7 +195,7 @@
     <img class="sidebar-logo" src="_static/logo_doclang.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">DocLang 26.9.16</span>
+  <span class="sidebar-brand-text">DocLang 26.9.18</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search" autocomplete="off">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search"
@@ -210,6 +210,7 @@
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="behavior.html">Command Behavior</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Default Commands</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="tutorials.html">Tutorials</a><input aria-label="Toggle navigation of Tutorials" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="tutorials/commands.html">Commands</a><input aria-label="Toggle navigation of Commands" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -300,7 +301,7 @@ tailored to their project’s structure, style and requirements.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="sphinx_doclang.commands.cmd_title">
-<span class="sig-name descname"><span class="pre">cmd_title</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Az'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decorator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'='</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#sphinx_doclang.commands.cmd_title" title="Link to this definition">&#10070;</a></dt>
+<span class="sig-name descname"><span class="pre">cmd_title</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Az'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decorator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'='</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="(in Python v3.14)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#sphinx_doclang.commands.cmd_title" title="Link to this definition">&#10070;</a></dt>
 <dd><p>Generates a formatted title with an underline.</p>
 <dl class="simple">
 <dt>The <code class="docutils literal notranslate"><span class="pre">style</span></code> option controls how the title text is transformed:</dt><dd><ul class="simple">
@@ -434,14 +435,14 @@ cleaned only for indentation and formatting consistency.</p>
               </div>
               <svg class="furo-related-icon"></svg>
             </a>
-          <a class="prev-page" href="configuration.html">
+          <a class="prev-page" href="behavior.html">
               <svg class="furo-related-icon"></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Configuration</div>
+                <div class="title">Command Behavior</div>
                 
               </div>
             </a>
@@ -503,7 +504,7 @@ cleaned only for indentation and formatting consistency.</p>
       
     </aside>
   </div>
-</div><script src="_static/documentation_options.js?v=2a8bdafb"></script>
+</div><script src="_static/documentation_options.js?v=3bc6b380"></script>
     <script src="_static/doctools.js?v=fd6eb6e6"></script>
     <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="_static/scripts/furo.js?v=46bd48cc"></script>

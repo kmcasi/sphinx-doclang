@@ -14,6 +14,22 @@ place the command in a Python file inside your project and import that file in
 
 ~~~~
 
+Note
+----
+
+Overwriting a command does not validate whether the new implementation matches
+the original command’s argument count, argument names or return type.
+The overwrite mechanism exists solely to prevent users from accidentally defining
+multiple commands with the same name.
+
+If a second command with an identical name is created without using the
+overwrite flag, Sphinx will fail during the documentation build. The overwrite
+feature ensures that users are explicitly aware they are redefining an existing
+command and that the new behavior intentionally differs from the original
+implementation.
+
+~~~~
+
 Example
 -------
 
@@ -30,8 +46,9 @@ built‑in ``title`` command:
     def custom_title(context, *args, decorator="=", **kwargs):
         title = f"[ {context} ]"
         underline = decorator * len(title)
-        return f"{title}\n{underline}"
+        return [title, underline]
 
 The new implementation completely replaces the default ``title`` command. Any
 docstring using ``§ title : ... ¶`` will now execute this version instead of the
 original.
+
